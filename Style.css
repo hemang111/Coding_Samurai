@@ -280,7 +280,12 @@ overflow-x: hidden;
 video{
     width: 500px;
 }
+.Our-team{
+    position: relative;
+
+}
 .TEAM-CONTAINER{
+    position: relative;
     padding-top: 40px ;
    display: grid;
    grid-template-columns: 1fr 1fr;
@@ -289,7 +294,7 @@ video{
    gap: 40px;
 }
 .MEMBER{
-    width: 20vw;
+
     height: 400px;
     background-color: var(--background-color);
     transition: all 400ms ease;
@@ -401,19 +406,83 @@ button:hover{
     width: 70vw;
     height: 1px;
 }
+#hid{
+    display: flex;
+}
+.project-card-content{
+    background-color: aqua;
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
 
+    grid-template-columns: 1fr 1fr;
+    
+    transform: translateX(-45%);
+    top: 160px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    justify-items: center;
+}
+#pi2{
+    background-color: azure;
+
+    display: none;
+}
+#pi2 > .cards{
+background-color: red;
+}
+.btns{
+    display: flex;
+    gap: 20px;
+    position: relative;
+    top: -20px;
+   
+}
+button{
+    color: var(--main-color);
+    cursor: pointer;
+}
+.cards{
+    width: 300px;
+    height: 400px;
+    background-color: antiquewhite;
+    margin: auto;
+}
 @media screen and (max-width : 800px) {
     .TEAM-CONTAINER{
         grid-template-columns: 1fr;
     }
 }
-@media screen and (max-height : 590px) {
+@media screen and (max-height : 690px) {
     .icon{
-        font-size : 25px
+        font-size : 20px
     
     }
-   
+    .li1{
+        display: none;
+      }
+    #hid{
+        display: none;
+    }
 
+    li{
+        gap : 30px;
+    }
+}
+@media screen and (max-height : 590px) {
+    .icon{
+        font-size : 20px
+    
+    }
+    .li1{
+        display: none;
+      }
+    #hid{
+        display: none;
+    }
 
     li{
         gap : 30px;
@@ -502,6 +571,7 @@ button:hover{
         height: 90%;
     }
 }
+
 .empty{
     width: 100vw;
     height: 1vh;
@@ -513,7 +583,150 @@ button:hover{
 
     height: 89vh;
     width: 95vw;
-   display: none;
+ 
 
     
+}
+#para{
+    display: flex;
+}
+#projects{
+    display: flex;
+    width : 90vw;
+    animation: 10s scrolling infinite linear;
+}
+@keyframes scrolling {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.projectcA{
+    background-color: antiquewhite;
+    width : 500px;
+    overflow-x: hidden;
+}
+
+.loi{
+    animation : 1s slidedown linear;
+    transform: translateY(-100%);
+    animation-fill-mode: forwards;
+    
+}
+
+
+
+@keyframes slidedown {
+    frome{
+        transform: translateY(-100%);
+        transform:rotate('0');
+    }
+    to{
+        transform: translateY(0%);
+        transform:rotate('20');
+    }
+}
+.projects{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+  
+    justify-content: center;
+}
+.project-card-container{
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+   
+    position: relative;
+    
+   overflow-x: hidden;
+    left : -40px;
+    
+}
+.project-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: aliceblue;
+    transition: all 200ms ease-in-out;
+    
+    
+}
+.project-card:hover{
+  box-shadow: 5px 5px 5px  var(--main-color);
+}
+.project-card img{
+    width: 100%;
+
+}
+
+#p1{
+    z-index: 0;
+
+}
+#p2{
+    background-color: blue;
+    z-index: 1;
+    display: none;
+}
+#p3{
+    z-index: 3;
+    display: none;
+    background-color: brown;
+}
+#p4{
+    z-index: 4;
+    display: none;
+    background-color: aqua;
+}
+#p5{
+    background-color: yellow;
+    z-index: 5;
+    display: none;
+}
+#p6{
+    background-color: aquamarine;
+    z-index: 6;
+    display: none;
+}
+.icons{
+    color: var(--main-color);
+}
+#b1,
+#b2{
+    cursor: pointer;
+}
+.anim{
+    animation: 1s grow linear ;
+animation-fill-mode: forwards;
+}
+.anim1{
+    animation: 1s shrink linear;
+    
+}
+@keyframes shrink {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform:translateX(-100%) ;
+
+    }
+}
+@keyframes grow {
+    from{
+        transform:translateX(-100%) ;
+    }
+    to{
+        transform: translateX(0%);
+    }
 }

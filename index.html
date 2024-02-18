@@ -38,7 +38,7 @@
                     <li><a href="#Our-Team"><i class="fa-regular fa-address-card  icon"></i>
                             <p>Our Team</p>
                         </a></li>
-                    <li><a href="#map"><i class="fa-solid fa-map-location-dot icon"></i>
+                    <li class= "li1" id="hid"><a  href="#map"><i class="fa-solid fa-map-location-dot icon"></i>
                             <p>Our<br>Location</p>
                         </a></li>
 
@@ -49,10 +49,8 @@
                                 class="fa-brands fa-linkedin-in  icon"></i>
                             <p>Linkedin</p>
                         </a></li>
-                        <li><input type="checkbox"
-                            id="blog">
-                        <label for="blog" class="icon1"><i id="BlogIcon"
-                                class="fa-regular fa-file-lines icon"></i><p id ='para'>blogs</p></label></label>
+                        <li><a href="blog.html"><i id="BlogIcon"
+                                class="fa-regular fa-file-lines icon"></i><p id ='para'>blogs</p></label></label></a>
                     </li>
                     <li class="ch " style="position: fixed; bottom: 130px;display: block; "><a target="_" href=""><i
                                 class="fa-brands fa-google-drive icon"></i>
@@ -72,8 +70,8 @@
     </header>
     <div id="homepage" class="main">
         <div id="home" class="home">
-            <div class="grid">
-                <div class="imk"><img src="Sources/lo1go.png" alt=""></div>
+            <div id ="make"class="grid">
+                <div id ="st" class="imk"><img src="Sources/lo1go.png" alt=""></div>
             </div>
             <div class="subgrid">
                 <div class="grid1">
@@ -147,18 +145,46 @@
                 </div>
             </div>
         </div>
-        <div class="projects">
-            <div class="project-card">
+        <div id ="PASS" class="projects">
                 <h1
-                    style="font-family: Nova Mono;text-align: center; padding-top: 40px; padding-bottom: 40px; position: relative; left : -50px;">
+                    style="font-family: Nova Mono;text-align: center; padding-top: 40px; padding-bottom: 40px; position: relative; left :-40px ">
                     OUR PROJECTs</h1>
-                <div id="coming" style="position: relative; left: -40px;" class="grid"><video src="Sources/Post.mp4"
-                        autoplay loop muted></video></div>
+              <div class="project-card-container">
+                <div id = "p1" class="project-card">
+                    <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+                    <div class="projectcontent"></div>
+              </div>
+              <div id = "p2" class="project-card">
+                <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+                <div class="projectcontent"></div>
+          </div>
+          <div id = "p3" class="project-card">
+            <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+            <div class="projectcontent"></div>
+      </div>
+      <div id = "p4" class="project-card">
+        <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+        <div class="projectcontent"></div>
+  </div>
+  <div id = "p5" class="project-card">
+    <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+    <div class="projectcontent"></div>
+</div>
+<div id = "p6" class="project-card">
+    <div class="project-card-banner"><img src="Sources/ode craft.jpg" alt=""></div>
+    <div class="projectcontent"></div>
+</div>
             </div>
-        </div>
-
+           <div style="padding: 40px; padding-bottom : 10px; display: flex; gap: 20px; align-items: center; align-content: center; width: 100%; height: fit-content; justify-content: center;"  class="buttons">
+            <button id='b1' style="position: relative; left: -40px;"><i class="fa-solid fa-chevron-left icons" ></i></button>
+            <button id= 'b2' style="position: relative; left: -40px;"><i class="fa-solid fa-chevron-right icons"></i></button>
+     
+           </div>
+            </div>
+        
+     
         <div id="Our-Team"></div>
-        <div class="Our-team">
+        <div  class="Our-team">
             <h1 style=" text-align: center;
                     padding-top: 40px; 
                     font-family: Nova Mono;
@@ -180,7 +206,7 @@
                         <button><a target="_" href="https://www.linkedin.com/in/coehemang/">Visit Profile</a></button>
                     </div>
                 </div>
-                <div class="MEMBER">
+                <div id="M2" class="MEMBER">
                     <div class="banner"><img src="Sources/garg.jpeg" alt="">
                         <div class="circle"><img src="Sources/OIG (5).jpeg" alt=""></div>
                         <p>GIRISH GARG</p>
@@ -215,6 +241,7 @@
 
             </div>
         </div>
+ 
         <div class="marque">
 
             <div id="l1" class="logos">
@@ -252,19 +279,26 @@
                 </div>
 
             </div>
-            <div id='map'></div>
-            <div class="MAP">
 
-                <div id='contactus'></div>
-                <h1
-                    style="text-align: center; padding-top: 40px; padding-bottom: 40px; position: relative; left : -50px; font-family: Big Shoulders Stencil Display;">
-                    CONTACT US</h1>
+         
+        </div>
+        <div id='map'></div>
+        <div class="MAP">
 
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.808167471138!2d73.03263407523933!3d26.267888687504335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c5ea67269fb%3A0x93b557732516d6d1!2sM.B.M.%20University!5e0!3m2!1sen!2sin!4v1706491326017!5m2!1sen!2sin"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <div id='contactus'></div>
+            <h1
+                style="text-align: center; padding-top: 40px; padding-bottom: 40px; position: relative; left : -50px; font-family: Big Shoulders Stencil Display;">
+                CONTACT US</h1>
+                <!--<div class="cgrid">
+
+                    <div class="cadmin"><h3>You can contact us through email at</h3><p><a href="mailto:info@thecodingsamurais.com"><i class="fa-solid fa-envelope "></i>info@thecodingsamurais.com</a></p></div>
+                    <div class="cmangament"></div>
+                </div>-->
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.808167471138!2d73.03263407523933!3d26.267888687504335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c5ea67269fb%3A0x93b557732516d6d1!2sM.B.M.%20University!5e0!3m2!1sen!2sin!4v1706491326017!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <footer style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
 
@@ -398,17 +432,7 @@
             <div class="empty"></div>
         </footer>
     </div>
-    <div id = "blog1" class="main">
-        <div class="projects">
-            <div class="project-card">
-                <h1
-                    style="font-family: Nova Mono;text-align: center; padding-top: 40px; padding-bottom: 40px; position: relative; left : -50px;">
-                    OUR BLOGS</h1>
-                <div id="coming" style="position: relative; left: -40px;" class="grid"><video src="Sources/SOON.mp4"
-                        autoplay loop muted></video></div>
-            </div>
-        </div>
-    </div>
+
     <script src="switch.js"></script>
 </body>
 

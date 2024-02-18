@@ -1,31 +1,4 @@
-document.getElementById('blog').addEventListener('change',function(){
-const blogIcon = document.getElementById('BlogIcon');
-const blogpage = document.getElementById('blog1');
-const page = document.getElementById('homepage');
-const para = document.getElementById('para');
-if(this.checked){
-blogIcon.classList.remove('fa-regular');
-blogIcon.classList.remove('fa-files-lines');
-blogIcon.classList.add('fa-solid');
-blogIcon.classList.add('fa-arrow-left');
-page.style.display = 'none';
-para.textContent = 'back';
-blogpage.style.display = 'flex';
-} else{
-  blogIcon.classList.remove('fa-solid');
-  blogIcon.classList.remove('fa-arrow-left');
-  blogIcon.classList.add('fa-regular');
-  blogIcon.classList.add('fa-files-lines');
-  para.textContent = 'blogs';
-  page.style.display = '';
-  blogpage.style.display = 'none';
-}
-const iconElements = document.getElementsByClassName('icon');
-  for (var i = 0; i < iconElements.length - 3; i++) {
-    iconElements[i].style.display = this.checked ? 'none' : '';
-  }
-}
-);
+
 
 document.getElementById('iconToggle').addEventListener('change', function() {
     var moonIcon = document.getElementById('moonIcon');
@@ -41,6 +14,7 @@ document.getElementById('iconToggle').addEventListener('change', function() {
       moonIcon.classList.remove('fa-sun');
       moonIcon.classList.add('fa-moon');
     }
+    
     const iconElements = document.getElementsByClassName('icon');
     for (var i = 0; i < iconElements.length; i++) {
       iconElements[i].style.color = this.checked ? 'black' : '';
@@ -50,6 +24,96 @@ document.getElementById('iconToggle').addEventListener('change', function() {
     rootStyle.setProperty('--background-color', this.checked ? 'white' : '');
     rootStyle.setProperty('--logo-color', this.checked ? 'black' : '');
    rootStyle.setProperty('--border-color', this.checked ? 'red' : '');
-  
+    rootStyle.getPropertyPriority
   }
   );
+
+  document.getElementById('make').addEventListener('mouseenter', function() {
+    document.getElementById('st').classList.add('loi');
+  
+  });
+  document.getElementById('make').addEventListener('mouseleave', function() {
+  document.getElementById('st').classList.remove('loi');
+  console.log("exit")
+});
+// for the project next prev buttons
+   var i = 0;
+  
+  const backwards = document.getElementById('b1');
+  const cards = document.getElementsByClassName('project-card');
+
+  if(i == 0){
+    backwards.style.display = 'none';
+  }
+  const forwards = document.getElementById('b2');
+  document.getElementById('b2').addEventListener('click', function() {
+    if(i == cards.length-2){
+      forwards.style.display = 'none';
+    }
+    if(i+1!=0){
+    backwards.style.display = 'flex';
+  }
+    
+    cards[i+1].style.display = 'flex';
+    cards[i+1].classList.add('anim');
+    
+
+    i++;
+  });
+  //These are the buttons b1 and b2 which have eventlisteners added to them
+  document.getElementById('b1').addEventListener('click', function() {
+    if(i == cards.length-1 && i!= 0){
+    forwards.style.display = 'flex';
+    }
+    if(i == 1){
+      backwards.style.display = 'none';
+    }
+    cards[i].style.display = 'none';
+ i--;
+  });
+  let keydownHandler = function(event) {
+    if (event.key === "ArrowRight") {
+      document.getElementById('b2').click();
+    }
+    else if(event.key === "ArrowLeft"){
+      if(i != 0){
+        document.getElementById('b1').click();  
+      }
+    }
+  };
+  
+  document.getElementById('PASS').addEventListener('mouseenter', function() {
+    document.body.addEventListener('keydown', keydownHandler);
+  });
+  
+  document.getElementById('PASS').addEventListener('mouseleave', function() {
+    document.body.removeEventListener('keydown', keydownHandler);
+  });
+
+  let startX, startY, endX, endY;
+const targetDiv = document.getElementById('PASS');
+
+targetDiv.addEventListener('mousedown', function(event) {
+  const rect = targetDiv.getBoundingClientRect();
+  startX = event.clientX - rect.left;
+  startY = event.clientY - rect.top;
+});
+
+targetDiv.addEventListener('mouseup', function(event) {
+  const rect = targetDiv.getBoundingClientRect();
+  endX = event.clientX - rect.left;
+  endY = event.clientY - rect.top;
+  
+  let deltaX = endX - startX;
+  let deltaY = endY - startY;
+  
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 0) {
+      document.getElementById('b2').click();
+    } else {
+      if(i != 0){
+        document.getElementById('b1').click();  
+      }
+    }
+  } 
+});
