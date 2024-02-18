@@ -117,3 +117,32 @@ targetDiv.addEventListener('mouseup', function(event) {
     }
   } 
 });
+const target1Div = document.getElementById('PASS');
+
+let start1X, start1Y;
+
+target1Div.addEventListener('touchstart', function(event) {
+  const touch = event.touches[0];
+  start1X = touch.clientX;
+  start1Y = touch.clientY;
+});
+
+targetDiv.addEventListener('touchend', function(event) {
+  const touch = event.changedTouches[0];
+  const endX = touch.clientX;
+  const endY = touch.clientY;
+
+  const deltaX = endX - start1X;
+  const deltaY = endY - start1Y;
+
+  if (Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX > 0) {
+      document.getElementById('b2').click();
+    } else { 
+      if (i != 0) {
+        document.getElementById('b1').click();  
+      }
+    }
+  }
+});
+
